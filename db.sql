@@ -10,8 +10,8 @@ CREATE TABLE authority (
   authId INT UNIQUE NOT NULL,
   authShort CHAR(8),
   authLong VARCHAR(45),
-  authBegin DATETIME,
-  authEnd DATETIME,
+  authBegin DATE,
+  authEnd DATE,
   authExperimental BOOLEAN,
   PRIMARY KEY(authId)
   );
