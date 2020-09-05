@@ -19,3 +19,24 @@ CREATE TABLE countryauthorityrelation(
   countryISO CHAR(2) NOT NULL,
   authId INT NOT NULL
 );
+-- SACID codes table
+CREATE TABLE sacidcode (
+  sacidcodeid INT UNIQUE NOT NULL,
+  sacidcode CHAR(5),
+  saciddescr VARCHAR(256),
+  PRIMARY KEY(sacidcodeid)
+);
+-- TOUB code table
+CREATE TABLE toubcode (
+  toubcodeid INT UNIQUE NOT NULL,
+  toubcode VARCHAR(3),
+  toubdescr VARCHAR(15),
+  PRIMARY KEY(toubcodeid)
+);
+-- Segmentation criteria code
+CREATE TABLE segmcrit (
+  segmcritid INT UNIQUE NOT NULL,
+  segmcritcode VARCHAR(7) UNIQUE NOT NULL,
+  segmcritdescr VARCHAR(256)
+  PRIMARY KEY(segmcritid)
+);
